@@ -108,7 +108,7 @@ const Skeleton: React.FC<ISkeletonProps> = ({
           generalStyles,
         })
       ) : (
-        <Animated.View style={hasFadeIn ? animatedStyle : {}}>
+        <Animated.View style={[hasFadeIn ? animatedStyle : {}, {flex: 1}]}>
           {children}
         </Animated.View>
       )}
